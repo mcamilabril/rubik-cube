@@ -10,9 +10,9 @@ output reg pwm
 reg [31:0] cnt_d;
 reg [31:0] cnt_t;
 
-//100MHz to 50Hz freq divider (servo freq)
 
-//100000 pulses = 1 ms
+
+//For 100MHz clk 100000 pulses = 1 ms
 
 
 always @(posedge clk) begin

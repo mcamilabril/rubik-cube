@@ -14,12 +14,22 @@ initial begin
 res=1; 
 #100;
 res=0;
+#5000
+
+res=1;
+#50;
+res=0;
+d=200;
+#15000;
+d=100;
+
 end
+
 
 initial begin: TEST_CASE
      $dumpfile("pwm_servos_TB.vcd");
      $dumpvars(-1, uut);
-     #(10000) $finish;
+     #(30000) $finish;
    
 
 
