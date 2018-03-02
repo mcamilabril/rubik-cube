@@ -1,9 +1,9 @@
-module pwm_servos (
+module pwm_servos #(d=200000,t=2000000)(
 
 input clk,
 input res,
-input [31:0] d,
-input [31:0] t,
+//input [31:0] d,
+//input [31:0] t,
 output reg pwm
 );
 

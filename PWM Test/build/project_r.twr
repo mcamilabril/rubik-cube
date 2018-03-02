@@ -1,0 +1,1297 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 25 project_r.ncd
+project.pcf
+
+Design file:              project_r.ncd
+Physical constraint file: project.pcf
+Device,package,speed:     xc7a100t,csg324,C,-1 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report, limited to 25 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 8928 paths analyzed, 241 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.755ns.
+--------------------------------------------------------------------------------
+Slack:                  2.245ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_6 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.673ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.047ns (1.566 - 1.613)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_6 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y81.CQ      Tcko                  0.456   cnt_d<7>
+                                                       cnt_d_6
+    SLICE_X53Y83.A2      net (fanout=2)        0.952   cnt_d<6>
+    SLICE_X53Y83.COUT    Topcya                0.656   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<0>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.673ns (2.432ns logic, 5.241ns route)
+                                                       (31.7% logic, 68.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.318ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_14 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.597ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_14 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.CQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_14
+    SLICE_X53Y83.B2      net (fanout=2)        0.858   cnt_d<14>
+    SLICE_X53Y83.COUT    Topcyb                0.674   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<1>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.597ns (2.450ns logic, 5.147ns route)
+                                                       (32.2% logic, 67.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.334ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_15 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.581ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_15 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.DQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_15
+    SLICE_X53Y83.B3      net (fanout=2)        0.842   cnt_d<15>
+    SLICE_X53Y83.COUT    Topcyb                0.674   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<1>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.581ns (2.450ns logic, 5.131ns route)
+                                                       (32.3% logic, 67.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.355ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_11 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.561ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_11 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.DQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_11
+    SLICE_X53Y83.B1      net (fanout=2)        0.822   cnt_d<11>
+    SLICE_X53Y83.COUT    Topcyb                0.674   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<1>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.561ns (2.450ns logic, 5.111ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.370ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_14 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.545ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_14 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.CQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_14
+    SLICE_X53Y83.B2      net (fanout=2)        0.858   cnt_d<14>
+    SLICE_X53Y83.COUT    Topcyb                0.622   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi1
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.545ns (2.398ns logic, 5.147ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.375ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_7 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.543ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.047ns (1.566 - 1.613)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_7 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y81.DQ      Tcko                  0.456   cnt_d<7>
+                                                       cnt_d_7
+    SLICE_X53Y83.A1      net (fanout=2)        0.822   cnt_d<7>
+    SLICE_X53Y83.COUT    Topcya                0.656   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<0>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.543ns (2.432ns logic, 5.111ns route)
+                                                       (32.2% logic, 67.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.386ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_15 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.529ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_15 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.DQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_15
+    SLICE_X53Y83.B3      net (fanout=2)        0.842   cnt_d<15>
+    SLICE_X53Y83.COUT    Topcyb                0.622   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi1
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.529ns (2.398ns logic, 5.131ns route)
+                                                       (31.9% logic, 68.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.396ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_7 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.522ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.047ns (1.566 - 1.613)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_7 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y81.DQ      Tcko                  0.456   cnt_d<7>
+                                                       cnt_d_7
+    SLICE_X53Y83.A1      net (fanout=2)        0.822   cnt_d<7>
+    SLICE_X53Y83.COUT    Topcya                0.635   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.522ns (2.411ns logic, 5.111ns route)
+                                                       (32.1% logic, 67.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.514ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_16 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.400ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.051ns (1.566 - 1.617)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_16 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y84.AQ      Tcko                  0.456   cnt_d<17>
+                                                       cnt_d_16
+    SLICE_X53Y83.C2      net (fanout=2)        0.813   cnt_d<16>
+    SLICE_X53Y83.COUT    Topcyc                0.522   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<2>1
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.400ns (2.298ns logic, 5.102ns route)
+                                                       (31.1% logic, 68.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.549ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_9 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.367ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_9 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.BQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_9
+    SLICE_X53Y83.A3      net (fanout=2)        0.646   cnt_d<9>
+    SLICE_X53Y83.COUT    Topcya                0.656   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<0>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.367ns (2.432ns logic, 4.935ns route)
+                                                       (33.0% logic, 67.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.572ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_9 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.344ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_9 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.BQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_9
+    SLICE_X53Y83.A3      net (fanout=2)        0.646   cnt_d<9>
+    SLICE_X53Y83.COUT    Topcya                0.633   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.344ns (2.409ns logic, 4.935ns route)
+                                                       (32.8% logic, 67.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.608ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_10 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.308ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_10 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.CQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_10
+    SLICE_X53Y83.A4      net (fanout=2)        0.587   cnt_d<10>
+    SLICE_X53Y83.COUT    Topcya                0.656   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<0>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.308ns (2.432ns logic, 4.876ns route)
+                                                       (33.3% logic, 66.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.631ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_10 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.285ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_10 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.CQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_10
+    SLICE_X53Y83.A4      net (fanout=2)        0.587   cnt_d<10>
+    SLICE_X53Y83.COUT    Topcya                0.633   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.285ns (2.409ns logic, 4.876ns route)
+                                                       (33.1% logic, 66.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.732ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_13 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.183ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_13 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.BQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_13
+    SLICE_X53Y83.B4      net (fanout=2)        0.444   cnt_d<13>
+    SLICE_X53Y83.COUT    Topcyb                0.674   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<1>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.183ns (2.450ns logic, 4.733ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.756ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_15 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.175ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_15 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y106.CQ     Tcko                  0.456   cnt_t<16>
+                                                       cnt_t_15
+    SLICE_X52Y101.B2     net (fanout=2)        1.161   cnt_t<15>
+    SLICE_X52Y101.COUT   Topcyb                0.674   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lut<1>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.175ns (2.505ns logic, 4.670ns route)
+                                                       (34.9% logic, 65.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.777ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_8 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.139ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_8 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.AQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_8
+    SLICE_X53Y83.A5      net (fanout=2)        0.418   cnt_d<8>
+    SLICE_X53Y83.COUT    Topcya                0.656   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lut<0>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.139ns (2.432ns logic, 4.707ns route)
+                                                       (34.1% logic, 65.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.786ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_13 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.129ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.050ns (1.566 - 1.616)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_13 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y83.BQ      Tcko                  0.456   cnt_d<15>
+                                                       cnt_d_13
+    SLICE_X53Y83.B4      net (fanout=2)        0.444   cnt_d<13>
+    SLICE_X53Y83.COUT    Topcyb                0.620   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi1
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.129ns (2.396ns logic, 4.733ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.804ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_11 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.127ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_11 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y105.CQ     Tcko                  0.456   cnt_t<12>
+                                                       cnt_t_11
+    SLICE_X52Y101.B1     net (fanout=2)        1.113   cnt_t<11>
+    SLICE_X52Y101.COUT   Topcyb                0.674   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lut<1>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.127ns (2.505ns logic, 4.622ns route)
+                                                       (35.1% logic, 64.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.808ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_15 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.123ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_15 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y106.CQ     Tcko                  0.456   cnt_t<16>
+                                                       cnt_t_15
+    SLICE_X52Y101.B2     net (fanout=2)        1.161   cnt_t<15>
+    SLICE_X52Y101.COUT   Topcyb                0.622   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lutdi1
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.123ns (2.453ns logic, 4.670ns route)
+                                                       (34.4% logic, 65.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.815ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_7 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.116ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_7 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y104.CQ     Tcko                  0.456   cnt_t<8>
+                                                       cnt_t_7
+    SLICE_X52Y101.A1     net (fanout=2)        1.120   cnt_t<7>
+    SLICE_X52Y101.COUT   Topcya                0.656   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lut<0>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.116ns (2.487ns logic, 4.629ns route)
+                                                       (34.9% logic, 65.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.832ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_d_8 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.084ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.049ns (1.566 - 1.615)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_d_8 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y82.AQ      Tcko                  0.456   cnt_d<11>
+                                                       cnt_d_8
+    SLICE_X53Y83.A5      net (fanout=2)        0.418   cnt_d<8>
+    SLICE_X53Y83.COUT    Topcya                0.601   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_lutdi
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.CIN     net (fanout=1)        0.000   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<3>
+    SLICE_X53Y84.BMUX    Tcinb                 0.362   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+                                                       Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A1     net (fanout=3)        1.582   Mcompar_cnt_d[31]_GND_1_o_LessThan_2_o_cy<5>
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.084ns (2.377ns logic, 4.707ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.836ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_7 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.095ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_7 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y104.CQ     Tcko                  0.456   cnt_t<8>
+                                                       cnt_t_7
+    SLICE_X52Y101.A1     net (fanout=2)        1.120   cnt_t<7>
+    SLICE_X52Y101.COUT   Topcya                0.635   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lutdi
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.095ns (2.466ns logic, 4.629ns route)
+                                                       (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.856ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_11 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.075ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.034ns (1.429 - 1.463)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_11 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y105.CQ     Tcko                  0.456   cnt_t<12>
+                                                       cnt_t_11
+    SLICE_X52Y101.B1     net (fanout=2)        1.113   cnt_t<11>
+    SLICE_X52Y101.COUT   Topcyb                0.622   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lutdi1
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.075ns (2.453ns logic, 4.622ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.881ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_20 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.051ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (1.429 - 1.462)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_20 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y107.DQ     Tcko                  0.456   cnt_t<20>
+                                                       cnt_t_20
+    SLICE_X52Y101.C1     net (fanout=2)        1.189   cnt_t<20>
+    SLICE_X52Y101.COUT   Topcyc                0.522   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lut<2>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.051ns (2.353ns logic, 4.698ns route)
+                                                       (33.4% logic, 66.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cnt_t_19 (FF)
+  Destination:          pwm_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.043ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.033ns (1.429 - 1.462)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cnt_t_19 to pwm_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X52Y107.CQ     Tcko                  0.456   cnt_t<20>
+                                                       cnt_t_19
+    SLICE_X52Y101.C2     net (fanout=2)        1.181   cnt_t<19>
+    SLICE_X52Y101.COUT   Topcyc                0.522   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_lut<2>
+                                                       Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CIN    net (fanout=1)        0.000   Mcompar_cnt_t[31]_GND_1_o_LessThan_4_o_cy<3>
+    SLICE_X52Y102.CMUX   Tcinc                 0.417   cnt_t<0>
+                                                       Mcount_cnt_t_cy<0>
+    SLICE_X53Y101.A2     net (fanout=1)        0.802   cnt_t[31]_GND_1_o_LessThan_4_o_inv_inv
+    SLICE_X53Y101.A      Tilo                  0.124   pwm_OBUF
+                                                       pwm_rstpot
+    OLOGIC_X0Y146.D1     net (fanout=1)        2.707   pwm_rstpot
+    OLOGIC_X0Y146.CLK    Todck                 0.834   pwm_1
+                                                       pwm_1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.043ns (2.353ns logic, 4.690ns route)
+                                                       (33.4% logic, 66.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.845ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.155ns (464.037MHz) (Tbcper_I(Fmax))
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 8.526ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.474ns (678.426MHz) (Tockper)
+  Physical resource: pwm_1/CLK
+  Logical resource: pwm_1/CK
+  Location pin: OLOGIC_X0Y146.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<0>/CLK
+  Logical resource: cnt_t_0/CK
+  Location pin: SLICE_X52Y102.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<0>/CLK
+  Logical resource: cnt_t_0/CK
+  Location pin: SLICE_X52Y102.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<0>/CLK
+  Logical resource: cnt_t_0/CK
+  Location pin: SLICE_X52Y102.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_1/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_1/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_1/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_2/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_2/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_2/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_3/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_3/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_3/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_4/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_4/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<4>/CLK
+  Logical resource: cnt_t_4/CK
+  Location pin: SLICE_X52Y103.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_5/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_5/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_5/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_6/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_6/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_6/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_7/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: cnt_t<8>/CLK
+  Logical resource: cnt_t_7/CK
+  Location pin: SLICE_X52Y104.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.755|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 8928 paths, 0 nets, and 135 connections
+
+Design statistics:
+   Minimum period:   7.755ns{1}   (Maximum frequency: 128.949MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Mar  2 13:12:59 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 773 MB
+
+
+
